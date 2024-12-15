@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-image: url(https://lumiere-a.akamaihd.net/v1/images/pp_xmen1992_herobanner_21369_2ead90c7.jpeg?region=0,0,2048,878);
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 20px 0;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover y focus */
+}
+
+/* HOVER Y FOCUS AL NAV */
+nav a:hover {
+  background-color: #555; /* Cambia el fondo al pasar el ratón */
+  color: rgb(85, 199, 241); /* Cambia el color del texto al pasar el ratón */
+}
+
+nav a:focus {
+  outline: 2px dashed rgb(49, 145, 214); /* Añade un borde visible al enfocar */
+  background-color: #222; /* Cambia el fondo al enfocar */
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+section li {
+  margin: 0 10px;
+  list-style-type: none; /* Elimina el punto original de la lista */
+  position: relative; /* Necesario para añadir la X */
+  padding-left: 20px; /* Espacio adicional para la X */
+}
+
+/* SUSTITUIR EL PUNTO DE LA LISTA POR LA X */
+section li::before {
+  content: 'X'; /* Texto */
+  color: white; /* Color de la X */
+  background-color: black; /* Fondo negro circular */
+  border-radius: 50%; /* Hace el fondo circular */
+  width: 20px; /* Ancho del círculo */
+  height: 20px; /* Altura del círculo */
+  display: flex; /* Centrado vertical y horizontal */
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em; /* Ajuste del tamaño de la X */
+  position: absolute;
+  left: 0;
+}
+
+section a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative; /* Para poder colocar los corchetes */
+  padding: 0 15px; /* Espacio adicional para los corchetes */
+}
+
+/* AÑADIR CORCHETES A LOS ENLACES */
+section a::before {
+  content: '['; /* Corchete izquierdo */
+  position: absolute;
+  left: 0; /* Ajusta la posición del corchete izquierdo */
+}
+
+section a::after {
+  content: ']'; /* Corchete derecho */
+  position: absolute;
+  right: 0; /* Ajusta la posición del corchete derecho */
+}
+
+/* AÑADIR HOVER A LOS ENLACES */
+section a:hover {
+  color: grey; /* Cambia el color del texto al pasar el ratón */
+  text-decoration: underline; /* Añade un subrayado al pasar el ratón */
+}
+
+/* AÑADIR FOCUS A LOS ENLACES */
+section a:focus {
+  outline: 2px solid grey; /* Añade un borde visible al enfocar */
+  background-color: #f0f0f0; /* Cambia el fondo al enfocar */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.8em;
+}
