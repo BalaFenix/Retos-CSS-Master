@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 50px;
+  border: 0;
+ background: radial-gradient(rgb(248, 249, 249), rgb(57, 58, 58));
+color: rgb(15, 15, 15);
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+p{
+  text-align: center;
+}
+
+
+span {
+  box-sizing: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+
+span::after {
+  content: "El núcleo de un agujero negro, donde la densidad y la gravedad se vuelven infinitas.";
+  position: absolute;
+  bottom: 100%;
+  right: 10%;
+  background-color: white;
+  color: black; 
+  padding: 5px 10px; 
+  border: 1px solid black; 
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.5s ease;
+  z-index: 10; 
+}
+
+
+span:hover::after {
+  opacity: 1;
+  visibility: visible; 
+}
+
+
+.tooltip-word:hover {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="16" fill="black"/></svg>') 16 16, auto;
+}
+
+
+}
